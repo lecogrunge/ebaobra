@@ -1,9 +1,8 @@
-﻿using Flunt.Notifications;
-using System;
+﻿using System;
 
 namespace EbaObra.Domain.Entities.Base
 {
-    public abstract class EntityBase : Notifiable
+	public abstract class EntityBase
     {
         public EntityBase()
         {

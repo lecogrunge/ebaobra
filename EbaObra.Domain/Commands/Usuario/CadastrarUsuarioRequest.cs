@@ -1,11 +1,10 @@
 ﻿using EbaObra.Domain.Enum;
 using EbaObra.Domain.ValueObjects;
 using EbaObra.Shared.Commands;
-using Flunt.Notifications;
 
 namespace EbaObra.Domain.Commands.Usuario
 {
-    public class CadastrarUsuarioRequest : Notifiable, ICommand
+	public class CadastrarUsuarioRequest : ICommand
     {
         public string Nome { get; set; }
         public string Sobrenome { get; set; }

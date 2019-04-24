@@ -1,9 +1,6 @@
-﻿using Flunt.Notifications;
-using Flunt.Validations;
-
-namespace EbaObra.Domain.ValueObjects
+﻿namespace EbaObra.Domain.ValueObjects
 {
-    public sealed class Email : Notifiable
+	public sealed class Email
     {
         private Email()
         {
@@ -13,11 +10,6 @@ namespace EbaObra.Domain.ValueObjects
         public Email(string email)
         {
             this.EnderecoEmail = email;
-            AddNotifications(new Contract()
-                .Requires()
-                .IsNotNullOrEmpty(this.EnderecoEmail, "Email.EnderecoEmail", "E-mail é obrigatório")
-                .IsEmail(this.EnderecoEmail, "Email.EnderecoEmail", "E-mail inválido.")
-            );
         }
 
         public string EnderecoEmail { get; private set; }
